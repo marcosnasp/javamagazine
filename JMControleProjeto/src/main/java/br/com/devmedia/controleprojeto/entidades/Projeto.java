@@ -34,7 +34,7 @@ public class Projeto implements Serializable {
 	private Double orcamento;
 	
 	@OneToMany(mappedBy = "projetoId")
-	private List<Alocaco> alocacoList;
+	private List<Alocacao> alocacoList;
 
 	public Projeto() {
 	}
@@ -42,4 +42,53 @@ public class Projeto implements Serializable {
 	public Projeto(Integer id) {
 		this.id = id;
 	}
+
+	public Integer getId() {
+		return id;
+	}
+
+	public void setId(Integer id) {
+		this.id = id;
+	}
+
+	public String getNome() {
+		return nome;
+	}
+
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
+
+	public String getDescricao() {
+		return descricao;
+	}
+
+	public void setDescricao(String descricao) {
+		this.descricao = descricao;
+	}
+
+	public String getSituacao() {
+		return situacao;
+	}
+
+	public void setSituacao(String situacao) {
+		this.situacao = situacao;
+	}
+
+	public Double getOrcamento() {
+		return orcamento;
+	}
+
+	public void setOrcamento(Double orcamento) {
+		this.orcamento = orcamento;
+	}
+
+	public List<Alocacao> getAlocacoList() {
+		return alocacoList;
+	}
+
+	public void setAlocacoList(List<Alocacao> alocacoList) {
+		this.alocacoList = alocacoList;
+	}
+	
 }

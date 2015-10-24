@@ -24,7 +24,7 @@ public class Estado implements Serializable {
 	@Column(name = "NOME")
 	private String nome;
 	
-	@OneToMany(mappedBy = "estadoId")
+	@OneToMany(mappedBy = "estado")
 	private List<Cidade> cidadeList;
 
 	public Estado() {

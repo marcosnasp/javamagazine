@@ -48,13 +48,77 @@ public class Colaborador implements Serializable {
 	private Departamento departamentoId;
 	
 	@OneToMany(mappedBy = "colaboradorId")
-	private List<Alocaco> alocacoList;
+	private List<Alocacao> alocacoList;
 
 	public Colaborador() {
 	}
 
 	public Colaborador(Integer id) {
 		this.id = id;
+	}
+
+	public Integer getId() {
+		return id;
+	}
+
+	public void setId(Integer id) {
+		this.id = id;
+	}
+
+	public String getNome() {
+		return nome;
+	}
+
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
+
+	public String getSexo() {
+		return sexo;
+	}
+
+	public void setSexo(String sexo) {
+		this.sexo = sexo;
+	}
+
+	public Date getDataNascimento() {
+		return dataNascimento;
+	}
+
+	public void setDataNascimento(Date dataNascimento) {
+		this.dataNascimento = dataNascimento;
+	}
+
+	public Double getRemuneracao() {
+		return remuneracao;
+	}
+
+	public void setRemuneracao(Double remuneracao) {
+		this.remuneracao = remuneracao;
+	}
+
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
+
+	public Departamento getDepartamentoId() {
+		return departamentoId;
+	}
+
+	public void setDepartamentoId(Departamento departamentoId) {
+		this.departamentoId = departamentoId;
+	}
+
+	public List<Alocacao> getAlocacoList() {
+		return alocacoList;
+	}
+
+	public void setAlocacoList(List<Alocacao> alocacoList) {
+		this.alocacoList = alocacoList;
 	}
 	
 }	

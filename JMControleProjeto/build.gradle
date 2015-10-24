@@ -37,6 +37,7 @@ dependencies {
 	compile 'org.primefaces:primefaces:5.0'
 	compile 'org.primefaces.extensions:primefaces-extensions:3.2.0'
 	compile 'org.glassfish:javax.faces:2.2.8'
+	compile 'org.postgresql:postgresql:9.4-1204-jdbc42'
 	
 	providedCompile 'org.hibernate:hibernate-core:4.3.6.Final'
 	providedCompile 'org.hibernate:hibernate-entitymanager:4.3.6.Final'
@@ -53,4 +54,10 @@ uploadArchives {
            dirs 'repos'
        }
     }
+}
+
+war {
+    from 'src/main/webapp' // adds a file-set to the root of the archive
+    webInf { from 'src/main/webapp/WEB-INF' } // adds a file-set to the WEB-INF dir.
+    webXml = file('src/main/webapp/WEB-INF/web.xml') // copies a file to WEB-INF/web.xml
 }

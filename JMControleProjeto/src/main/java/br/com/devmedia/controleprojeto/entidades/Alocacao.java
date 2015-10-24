@@ -12,8 +12,8 @@ import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "alocaco")
-public class Alocaco implements Serializable {
+@Table(name = "alocacao")
+public class Alocacao implements Serializable {
 	private static final long serialVersionUID = 1L;
 	
 	@Id
@@ -35,11 +35,51 @@ public class Alocaco implements Serializable {
 	@ManyToOne
 	private Projeto projetoId;
 
-	public Alocaco() {
+	public Alocacao() {
 	}
 
-	public Alocaco(Integer id) {
+	public Alocacao(Integer id) {
 		this.id = id;
 	}
 
+	public Integer getId() {
+		return id;
+	}
+
+	public void setId(Integer id) {
+		this.id = id;
+	}
+
+	public Integer getCargaHoraria() {
+		return cargaHoraria;
+	}
+
+	public void setCargaHoraria(Integer cargaHoraria) {
+		this.cargaHoraria = cargaHoraria;
+	}
+
+	public Integer getSituacao() {
+		return situacao;
+	}
+
+	public void setSituacao(Integer situacao) {
+		this.situacao = situacao;
+	}
+
+	public Colaborador getColaboradorId() {
+		return colaboradorId;
+	}
+
+	public void setColaboradorId(Colaborador colaboradorId) {
+		this.colaboradorId = colaboradorId;
+	}
+
+	public Projeto getProjetoId() {
+		return projetoId;
+	}
+
+	public void setProjetoId(Projeto projetoId) {
+		this.projetoId = projetoId;
+	}
+	
 }

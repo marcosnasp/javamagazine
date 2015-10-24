@@ -27,7 +27,7 @@ public class Cidade implements Serializable {
 	
 	@JoinColumn(name = "ESTADO_ID", referencedColumnName = "ID")
 	@ManyToOne
-	private Estado estadoId;
+	private Estado estado;
 
 	public Cidade() {
 	}
@@ -52,15 +52,12 @@ public class Cidade implements Serializable {
 		this.nome = nome;
 	}
 
-	public Estado getEstadoId() {
-		return estadoId;
+	public Estado getEstado() {
+		return estado;
 	}
 
-	public void setEstadoId(Estado estadoId) {
-		this.estadoId = estadoId;
+	public void setEstado(Estado estado) {
+		this.estado = estado;
 	}
 
 }
-	
-		
-
